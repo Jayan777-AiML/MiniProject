@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+.venv/
+
+# Secrets
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated output
+data/
+metrics/
+model/
