@@ -4,8 +4,11 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Load environment variables from the project root
 load_dotenv(Path(__file__).with_name(".env"))
+
 MONGO_URI = os.getenv("MONGO_URI")
+
 if not MONGO_URI:
     raise RuntimeError("MONGO_URI is missing. Set it in the .env file.")
 
@@ -35,7 +38,6 @@ try:
         df = df.drop(columns=["_id"])
 
     print("\nData shape:", df.shape)
-
     print("\nColumns:")
     print(df.columns.tolist())
 
